@@ -19,6 +19,7 @@ public function conectar(){
     try {
         $this->conexao = new PDO($dsn, $this->user, $this->pwd);
         $this->conexao->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        echo 'Conectou';
     } catch (\Exception $e) {
         echo "Erro" . $e->getMessage();
     }
